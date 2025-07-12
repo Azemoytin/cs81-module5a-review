@@ -1,3 +1,4 @@
+// An array of objects representing the hobbies for different days
 const hobbyLog = [
   { day: "Monday", hobby: "drawing", minutes: 30, mood: "focused" },
   { day: "Tuesday", hobby: "reading", minutes: 20, mood: "relaxed" },
@@ -7,20 +8,29 @@ const hobbyLog = [
 ];
 
 function totalTime(log) {
+// calculates the total time spent on hobbies
   return log.reduce((sum, session) => sum + session.minutes, 0);
+// uses reduce() to gather the total minutes from each session
 }
 
 function uniqueHobbies(log) {
+// returns an array for the hobby names
   const names = log.map(entry => entry.hobby);
+// uses map() to put just the hobby names into a new array
   return [...new Set(names)];
+// Set() removes duplicates and spreads them back into an array
 }
 
 function longSessions(log, minMinutes) {
+// reports sessions that lasted longer than the given number
   return log.filter(entry => entry.minutes > minMinutes);
+// Uses filter() to only have the hobbies that were longer than minMinutes
 }
 
 function countMood(log, moodType) {
+// counts how the specific number of moods
   return log.filter(entry => entry.mood === moodType).length;
+// Uses filter() to match with the given mood, then returns the function
 }
 
 console.log("Total time spent:", totalTime(hobbyLog), "minutes");
