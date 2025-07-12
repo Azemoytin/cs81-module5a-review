@@ -7,6 +7,7 @@ const hobbyLog = [
   { day: "Friday", hobby: "reading", minutes: 35, mood: "calm" }
 ];
 
+// SUGGESTION: I think renaming totalTime into getTotalMinutes for clarity is better because it tells you what unit is being returned.
 function totalTime(log) {
 // calculates the total time spent on hobbies
   return log.reduce((sum, session) => sum + session.minutes, 0);
