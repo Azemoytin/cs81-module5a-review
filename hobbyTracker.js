@@ -1,3 +1,5 @@
+// https://github.com/Azemoytin/cs81-module5a-review
+
 // An array of objects representing the hobbies for different days
 const hobbyLog = [
   { day: "Monday", hobby: "drawing", minutes: 30, mood: "focused" },
